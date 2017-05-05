@@ -1,0 +1,88 @@
+.incaPhoto2 {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: auto auto;
+}
+
+.question1 {
+  margin-top: 100px;
+  margin-left: 25%;
+  color: gold;
+}
+
+.quest {
+  font-family: Times;
+  font-size: 25px;
+  margin-left: 21%;
+  color: gold;
+}
+
+.cent {
+  text-align: center;
+}
+// .create_new_question {
+//   font-family: Times;
+//   font-size: 25px;
+//   margin-left: 21%;
+//   color: gold;
+//   text-decoration: none;
+// }
+
+// .question_home_back {
+//     font-family: adventure;
+//     margin-left: 21%
+//     color: orange;
+// }
+
+.question_border {
+  color: black;
+	font-family: Adventure;
+  font-size: 30px;
+	position: absolute;
+	width: 600px;
+	top: 390px;
+	right: 200px;
+	display: inline-block;
+	background-color: white;
+	border-radius: 10px;
+	border: solid 4px gold;
+	padding: 2px;
+	opacity: 0.7;
+	z-index: 100;
+}
+
+.question_border_submit {
+  color: black;
+	font-family: Adventure;
+  font-size: 30px;
+	position: absolute;
+	width: 600px;
+	top: 390px;
+	text-align: center;
+	right: 200px;
+	display: inline-block;
+	background-color: white;
+	border-radius: 10px;
+	border: solid 4px gold;
+	padding: 2px;
+	opacity: 0.7;
+	z-index: 100;
+}
+
+#title2 {
+	color: black;
+	font-family: Adventure;
+	position: absolute;
+	width: 600px;
+	top: 270px;
+	right: 200px;
+	text-align: center;
+	display: inline-block;
+	background-color: white;
+	border-radius: 10px;
+	border: solid 4px gold;
+	opacity: 0.8;
+	padding: 0 5px;
+	z-index: 100;
+}
