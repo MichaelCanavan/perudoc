@@ -3,13 +3,152 @@
   <head>
     <title>Peru DOC</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="css/normalize.css">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-  </head>
+
+  </head><div id ="wrapper">
+<header class="BG" >
+	<div >
+    <!-- <img class="Map" src="images/PeruMap2.jpg"> -->
+    <!-- <%=image_tag("PeruMap2.jpg", class: "Map") %> -->
+    <%= link_to root_path do %>
+      <%=image_tag("PeruDOC.png", class: "Peru") %>
+    <% end %>
+    	<!-- <a href="index.html"><img class="Peru" src="images/PeruDOC.png"></a> -->
+
+
+      <%= link_to "https://www.northeastern.edu/", target: :_blank do %>
+        <%= image_tag("neu-seal.png", id: :NU, alt: "Northeastern University") %>
+      <% end %>
+
+
+	<!-- <img id="NU" src="images/neu-seal.png"> -->
+
+
+	<!-- <ul id="Icons"> -->
+  <div class="row">
+    <div class="links small-5 columns">
+
+
+      <div>
+        <% if current_user.present? %>
+          <% if current_user.admin %>
+            <%= link_to "Admin Page", users_path%>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+    <div class="flashy small-4 columns centered-align">
+
+        <% flash.each do |kind, message| %>
+        <p><%= message %></p>
+        <% end %>
+    </div>
+    <div class="text-right small-3 columns">
+      <% if current_user.present? %>
+        <% if current_user.avatar.present? %>
+        <%= image_tag(current_user.avatar.url, size: "75x75", class: 'avatar_icon') %>
+        <% else %>
+        <%= image_tag("fallback/default.jpg", size: "75x75", class: 'avatar_icon') %>
+        <% end %>
+        <span><%= link_to current_user.username, user_path(current_user) %><span>
+        <span><%= link_to "Log Out", destroy_user_session_path, :method => :delete %><span></br>
+      <% else %>
+        <p class= "loginbox"><%= link_to "Log In", new_user_session_path%>&nbsp&nbsp&nbsp&nbsp
+        <%= link_to "Sign Up", new_user_registration_path%></p>
+      <% end %>
+    </div>
+  </div>
+
+      <%= link_to "https://www.facebook.com/PeruDialogueofCivilization/?fref=ts", target: :_blank do %>
+        <%= image_tag("SocialMediaIcons/FacebookIcon.png", id: :FB, alt: "Facebook") %>
+      <% end %>
+
+      <%= link_to "https://twitter.com/perudialogue15", target: :_blank do %>
+        <%= image_tag("SocialMediaIcons/TwitterIcon.png", id: :TW, alt: "Twitter") %>
+      <% end %>
+
+      <!-- <%= link_to "https://www.instagram.com/PeruDialogueofCivilization/?fref=ts", target: :_blank do %>
+        <%= image_tag("SocialMediaIcons/InstagramIcon.png", id: :IG, alt: "Instagram") %>
+      <% end %> -->
+
+      <%= link_to "http://indianajones.wikia.com/wiki/Peru", target: :_blank do %>
+        <%= image_tag("idol_2.png", id: :IG, alt: "Indiana Jones") %>
+      <% end %>
+
+			<!-- <li><a href="https://www.instagram.com/PeruDialogueofCivilization/?fref=ts" target="_blank">
+			<img id="IG" src="images/SocialMediaIcons/InstagramIcon.png">
+		    </a></li> -->
+		<!-- </ul> -->
+
+    </div>
+</header>
+
+
+	<div id="nav">
+	  <ul>
+      <div class="homebox">
+        <%= link_to 'Home', root_path, :class => "button1" %>
+        <%= link_to 'Blog', href="http://perudocblog.com/", :class => "button2" %>
+        
+        <%= link_to 'Questions', questions_path, :class => "button4" %>
+      </div>
+
+
+		<!-- <li><a href="index.html"><img class="button1" src="homeButton.png"></a></li>
+		<li><a href="about.html"><img class="button2" src="aboutButton.png"></a></li>
+		<li><a href="http://perudocblog.com" target="_blank"><img class="button3" src="images/blogButton.png"></a></li>
+		<li><a href="photos.html"><img class="button4" src="photosButton.png"></a></li>
+		<li><a href="testimonials.html"><img class="button5" src="testimonialsButton.png"></a></li>
+		<li><a href="contact.html"><img class="button6" src="contactButton.png"></a></li> -->
+	  </ul>
+	</div>
+
 
   <body>
-    <h1>Peru DOC</h1>
-    <%= yield %>
+    <!-- <div class="homebox">
+      <%= link_to 'Home', root_path %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <%= link_to 'Blog', href="http://perudocblog.com/" %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <%= link_to 'Questions', questions_path %>
+    </div> -->
+    <div id="container">
+
+  <%= yield %>
+
+	<!-- <div id="left">
+		<%=image_tag("empty_cave_window2.png", id: "window") %>
+		<%=image_tag("MACHU-PICCHU-facebook.jpg", id: "myPhotos") %>
+	</div>
+
+	<div id="right">
+		<div id="welcomeAdventures">
+    <%=image_tag("WelcomeAdventureText3.png")%>
+		</div>
+
+		<div id="torchLeft">
+		<%=image_tag("LeftTorchesNoFlame350.png")%>
+		</div>
+
+		<div id="flame">
+		<%=image_tag("LRflame0002.gif", style: "height:50%; width:50%;")%>
+		</div>
+
+		<div id="torchRight">
+		<%=image_tag("RightTorchesNoFlame350.png")%>
+		</div>
+
+		<div id="flame2">
+		<%=image_tag("LRflame0002.gif", style: "height:50%; width:50%;")%>
+		</div>
+  </div>
+
+	</div>
+
+  </div>
+</div>
+<link rel="stylesheet" type="text/css"  href="PeruMona.scss"> -->
+
+
   </body>
 </html>
