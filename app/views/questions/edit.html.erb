@@ -1,3 +1,7 @@
+<%=image_tag("inca-jungle.jpg", class: "incaPhoto2") %>
+<div id="title2"><h1>Edit Question</h1></div>
+
+<div class="question_border">
 <% unless @question.errors.empty? %>
   <div>
     <%= @question.errors.full_messages.to_sentence %>
@@ -8,7 +12,7 @@
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </div>
+  </div></br>
 
   <div class="field">
     <%= f.label :description %><br />
@@ -17,7 +21,10 @@
 
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div></br>
 <% end %>
+</div>
+<div class="edit_testimonial_border">
 <p><%= link_to "Delete Question", @question, method: :delete, data: {confirm: "Are you sure?"} %></p>
 <p><%= link_to "Back", questions_path %></p>
+</div>

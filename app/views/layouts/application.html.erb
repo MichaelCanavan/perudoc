@@ -69,13 +69,13 @@
         <%= image_tag("SocialMediaIcons/TwitterIcon.png", id: :TW, alt: "Twitter") %>
       <% end %>
 
-      <!-- <%= link_to "https://www.instagram.com/PeruDialogueofCivilization/?fref=ts", target: :_blank do %>
+      <%= link_to "https://www.instagram.com/PeruDialogueofCivilization", target: :_blank do %>
         <%= image_tag("SocialMediaIcons/InstagramIcon.png", id: :IG, alt: "Instagram") %>
-      <% end %> -->
-
-      <%= link_to "http://indianajones.wikia.com/wiki/Peru", target: :_blank do %>
-        <%= image_tag("idol_2.png", id: :IG, alt: "Indiana Jones") %>
       <% end %>
+
+      <!-- <%= link_to "http://indianajones.wikia.com/wiki/Peru", target: :_blank do %>
+        <%= image_tag("idol_2.png", id: :IJ, alt: "Indiana Jones") %>
+      <% end %> -->
 
 			<!-- <li><a href="https://www.instagram.com/PeruDialogueofCivilization/?fref=ts" target="_blank">
 			<img id="IG" src="images/SocialMediaIcons/InstagramIcon.png">
@@ -90,9 +90,10 @@
 	  <ul>
       <div class="homebox">
         <%= link_to 'Home', root_path, :class => "button1" %>
-        <%= link_to 'Blog', href="http://perudocblog.com/", :class => "button2" %>
-        
-        <%= link_to 'Questions', questions_path, :class => "button4" %>
+        <%= link_to 'About', about_index_path, :class => "button2" %>
+        <%= link_to 'Blog', href="http://perudocblog.com/", :class => "button3" %>
+        <%= link_to 'Testimonials', testimonials_path, :class => "button4" %>
+        <%= link_to 'Questions', questions_path, :class => "button5" %>
       </div>
 
 

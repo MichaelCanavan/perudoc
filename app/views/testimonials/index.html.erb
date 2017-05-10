@@ -1,0 +1,38 @@
+<!-- <h1 class="question1">Question</h1>
+ -->
+
+ <%=image_tag("aboutBG_2.jpg", class: "incaPhoto2") %>
+
+<ul class="quest">
+  <% @testimonials.each do |testimonial| %>
+
+    <li> <%= link_to testimonial.name, testimonial_path(testimonial)  %>  </li>
+  <% end %>
+</ul>
+
+<div id="title2"><h1>Write a Testimonial</h1></div>
+
+<div class="question_border">
+  <h3>If you have previously<br> participated in the <br>Peru Dialogue of Civilization, <br>
+    please click the link below to share <br> your experience.<br>
+    Thanks!</h3>
+  <div class="cent">
+  <p><%= link_to "Create New Testimonial", new_testimonial_path %></p>
+
+    <p><%= link_to 'Back to Home', root_path %></p>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- </div> -->
